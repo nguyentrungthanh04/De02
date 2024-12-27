@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174 d17.12
+VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "De02", "De02\De02.csproj", "{EFB4B456-AB2F-45B6-9EE7-0FAB9CDE8E79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "De02_GUI", "De02\De02_GUI.csproj", "{EFB4B456-AB2F-45B6-9EE7-0FAB9CDE8E79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "De02_BUS", "De02_BUS\De02_BUS.csproj", "{6FF40287-B300-4E52-91D7-3188A1B01E49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "De02_DAL", "De02_DAL\De02_DAL.csproj", "{6C82CDB0-EB66-43A1-AFFD-73D8EC7BCF0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{EFB4B456-AB2F-45B6-9EE7-0FAB9CDE8E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFB4B456-AB2F-45B6-9EE7-0FAB9CDE8E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFB4B456-AB2F-45B6-9EE7-0FAB9CDE8E79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FF40287-B300-4E52-91D7-3188A1B01E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FF40287-B300-4E52-91D7-3188A1B01E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FF40287-B300-4E52-91D7-3188A1B01E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FF40287-B300-4E52-91D7-3188A1B01E49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C82CDB0-EB66-43A1-AFFD-73D8EC7BCF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C82CDB0-EB66-43A1-AFFD-73D8EC7BCF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C82CDB0-EB66-43A1-AFFD-73D8EC7BCF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C82CDB0-EB66-43A1-AFFD-73D8EC7BCF0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

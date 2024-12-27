@@ -9,13 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using De02.Models;
+using De02_BUS;
+using De02_DAL.Models;
 using static De02.frnSanPham;
 
 namespace De02
 {
     public partial class frnSanPham : Form
     {
+        private readonly SanphamService sanphamService = new SanphamService();
+        private readonly LoaiSPService loaispService = new LoaiSPService();
         public frnSanPham()
         {
             InitializeComponent();
@@ -25,18 +28,10 @@ namespace De02
         {
             try
             {
-                SanphamContextDB context = new SanphamContextDB();
-                string maLoaiSP = txtMaSP.Text;
-                string tenLoaiSP = cbLoaiSP.Text;
-
-                List<LoaiSP> ListSP = context.LoaiSPs.ToList();
-                FillcbLoaiSPCombobox(ListSP);
-
-                List<Sanpham> listProduct = context.Sanphams.ToList();
-                BindGrid(listProduct);
-                btLuu.Enabled = false;
-                btKLuu.Enabled = false;
-
+                var listSPs = sanphamService.GetAll();
+                var LoaiSPs = loaispService.GetAll();
+                FillcbLoaiSPCombobox(LoaiSPs);
+                BindGrid(listSPs);
             }
             catch (Exception ex)
             {
@@ -188,7 +183,6 @@ namespace De02
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = lvSanPham.Rows[e.RowIndex];
-
                 txtMaSP.Text = row.Cells[0].Value.ToString();
                 txtTenSP.Text = row.Cells[1].Value.ToString();
                 dtNgaynhap.Value = Convert.ToDateTime(row.Cells[2].Value);

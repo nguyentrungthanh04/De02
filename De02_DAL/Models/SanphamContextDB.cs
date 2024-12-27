@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 
-namespace De02.Models
+namespace De02_DAL.Models
 {
     public partial class SanphamContextDB : DbContext
     {
@@ -14,6 +14,7 @@ namespace De02.Models
 
         public virtual DbSet<LoaiSP> LoaiSPs { get; set; }
         public virtual DbSet<Sanpham> Sanphams { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

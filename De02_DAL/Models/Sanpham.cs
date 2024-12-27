@@ -1,4 +1,4 @@
-namespace De02.Models
+namespace De02_DAL.Models
 {
     using System;
     using System.Collections.Generic;
